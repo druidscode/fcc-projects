@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Survey Form
+        </title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+    <div class="container">
+        <header>
+            <h1 id="title">XYZ Juices Co.</h1>
+            <p class="subheading">Thank you for taking the time to help us improve the platform </p>
+        </header>
+        <form id="survey-form">
+        <div class="form-items">
+            <label id="name-label">
+                <p>Name:</p>
+                <input
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                />
+            </label>
+            <label id="email-label">
+                <p>Email:</p>
+                <input
+                id="email"
+                type="email"
+                placeholder="Enter your email"
+                />
+            </label>
+            <label id="number-label">
+                <p>Number:</p>
+                <input
+                id="number"
+                type="number"
+                placeholder="Enter your Number"
+                min="5"
+                max="10"
+                />
+            </label>
+        </div>
+        <div class="form-items">
+            <label id="fruits-dropdown" class="fruits">
+                <p>What is your Favorite Juice Flavour?</p>
+                <select id="dropdown">
+                    <option>Select your fruit</option>
+                    <option>Apple</option>
+                    <option>Mango</option>
+                    <option>Banana</option>
+                    <option>Grapes</option>
+                </select>
+            </label>
+            <label id="order-type">
+                <p>How to order your juices?</p>
+                <input
+                id="online-offline"
+                name="ordertype"
+                type="radio"
+                />
+                Offline, from the store
+                <input
+                id="online-offline"
+                name="ordertype"
+                type="radio"
+                />
+                Online, through our App
+            </label>
+            <label id="experience">
+                <p>Want to help us improve your In-Store experience? Select the relevant option which you think needs improvment.</p>
+                <input
+                class="exp"
+                type="checkbox"
+                value="Staff"
+                />
+                Staff
+                <input
+                class="exp"
+                type="checkbox"
+                value="ambiance"
+                />
+                Ambiance
+                <input
+                class="exp"
+                type="checkbox"
+                value="music"
+                />
+                Music Playlist
+                <input
+                class="exp"
+                type="checkbox"
+                value="deliverytime"
+                />
+                Delivery Time
+            </label>
+        </div>
+        <div class="form-items">
+            <label class="anything-else">
+                <p>
+                Any more thoughts about our Services? Feel free to add them below. 
+                </p>
+                <textarea
+                class="thoughts"
+                placeholder="Enter your thoughts..."
+                >
+                </textarea>
+            </label>
+        </div>
+        <button id="submit" class="submit-button" type="submit">
+            Submit
+        </button>
+        </form>
+    </div>
+    </body>
+</html>
