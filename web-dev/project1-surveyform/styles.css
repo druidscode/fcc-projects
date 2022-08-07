@@ -1,5 +1,7 @@
+/*IMPORTING FONT*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 
+/*COLOR PALLETE*/
 :root {
     --color-main: #03658c;
     --color-font: #ff6361;
@@ -8,6 +10,7 @@
     --color-headerfont:#58508d;
   }
 
+/*FORM*/
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;

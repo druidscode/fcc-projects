@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>
             Survey Form
         </title>
         <link rel="stylesheet" href="styles.css"/>
     </head>
+
     <body>
     <div class="container">
+        
         <header>
             <h1 id="title">XYZ Juice Co.</h1>
             <p class="subheading">Thank you for taking the time to help us improve the platform </p>
         </header>
+
         <form id="survey-form">
+
+<!--THIS BLOCK CONTAINS INPUT FOR NAME, EMAIL AND AGE-->
+
         <div class="form-items">
+
             <label id="name-label">
                 <p>Name:</p>
                 <input
@@ -22,6 +30,7 @@
                 placeholder="Please enter your name"
                 />
             </label>
+
             <label id="email-label">
                 <p>Email:</p>
                 <input
@@ -30,6 +39,7 @@
                 placeholder="Please enter your email"
                 />
             </label>
+            
             <label id="number-label">
                 <p>Age:</p>
                 <input
@@ -40,7 +50,11 @@
                 max="10"
                 />
             </label>
+
         </div>
+
+<!--THIS BLOCK CONTAINS DROPDOWN MENU-->
+
         <div class="form-items">
             <label id="dropdown" class="air-class">
                 <p>What best suits your occupation?</p>
@@ -52,6 +66,9 @@
                     <option>Grapes</option>
                 </select>
             </label>
+
+<!--THIS BLOCK CONTAINS RADIO BTNS-->
+
             <label id="order-type">
                 <p>How to order your juices?</p>
                 <input
@@ -59,6 +76,7 @@
                 name="ordertype"
                 type="radio"
                 />
+
                 Offline, from the store
                 <input
                 id="online-offline"
@@ -67,6 +85,9 @@
                 />
                 Online, through our App
             </label>
+
+<!--THIS BLOCK CONTAINS CHECKBOXES-->
+
             <label id="experience">
                 <p>Want to help us improve your In-Store experience? Select the relevant option which you think needs improvment.</p>
                 <input
@@ -75,18 +96,21 @@
                 value="Staff"
                 />
                 Staff
+
                 <input
                 class="exp"
                 type="checkbox"
                 value="ambiance"
                 />
                 Ambiance
+
                 <input
                 class="exp"
                 type="checkbox"
                 value="music"
                 />
                 Music Playlist
+                
                 <input
                 class="exp"
                 type="checkbox"
@@ -94,7 +118,11 @@
                 />
                 Delivery Time
             </label>
+
         </div>
+
+<!--THIS BLOCK CONTAINS THE TEXTAREA-->
+
         <div class="form-items">
             <label class="anything-else">
                 <p>
@@ -107,10 +135,16 @@
                 </textarea>
             </label>
         </div>
+
+<!--THIS BLOCK CONTAINS THE SUBMIT BTN-->
+
         <button id="submit" class="submit-button" type="submit">
             Submit
         </button>
+
         </form>
+
     </div>
+
     </body>
 </html>
