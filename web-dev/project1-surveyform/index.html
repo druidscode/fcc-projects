@@ -2,17 +2,20 @@
 <html>
 
     <head>
+
         <title>
             Survey Form
         </title>
+
         <link rel="stylesheet" href="styles.css"/>
+
     </head>
 
     <body>
     <div class="container">
-        
+
         <header>
-            <h1 id="title">XYZ Juice Co.</h1>
+            <h1 id="title">Computers Co.</h1>
             <p class="subheading">Thank you for taking the time to help us improve the platform </p>
         </header>
 
@@ -20,27 +23,29 @@
 
 <!--THIS BLOCK CONTAINS INPUT FOR NAME, EMAIL AND AGE-->
 
-        <div class="form-items">
+        <div class="form-items na-em-ag">
 
-            <label id="name-label">
+            <label id="name-label" class="l1-group">
                 <p>Name:</p>
                 <input
                 id="name"
                 type="text"
                 placeholder="Please enter your name"
+                required
                 />
             </label>
 
-            <label id="email-label">
+            <label id="email-label" class="l1-group">
                 <p>Email:</p>
                 <input
                 id="email"
                 type="email"
                 placeholder="Please enter your email"
+                required
                 />
             </label>
             
-            <label id="number-label">
+            <label id="number-label" class="l1-group">
                 <p>Age:</p>
                 <input
                 id="number"
@@ -48,6 +53,7 @@
                 placeholder="Please enter your Age"
                 min="5"
                 max="10"
+                required
                 />
             </label>
 
@@ -56,14 +62,13 @@
 <!--THIS BLOCK CONTAINS DROPDOWN MENU-->
 
         <div class="form-items">
-            <label id="dropdown" class="air-class">
-                <p>What best suits your occupation?</p>
+            <label id="d-down" class="air-class">
+                <p>What kind of business you are?</p>
                 <select id="dropdown">
                     <option>Select your occupation</option>
-                    <option>Business</option>
-                    <option>Govt Employee</option>
-                    <option>Banana</option>
-                    <option>Grapes</option>
+                    <option>Small (1-10 Employees)</option>
+                    <option>Medium (10-15 Employees)</option>
+                    <option>Large (More than 20 Employees) </option>
                 </select>
             </label>
 
@@ -72,18 +77,18 @@
             <label id="order-type">
                 <p>How to order your juices?</p>
                 <input
-                id="online-offline"
+                id="rad"
                 name="ordertype"
                 type="radio"
                 />
+                Offline
 
-                Offline, from the store
                 <input
-                id="online-offline"
+                id="rad"
                 name="ordertype"
                 type="radio"
                 />
-                Online, through our App
+                Online
             </label>
 
 <!--THIS BLOCK CONTAINS CHECKBOXES-->

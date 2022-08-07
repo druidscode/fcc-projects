@@ -4,8 +4,8 @@
 /*COLOR PALLETE*/
 :root {
     --color-main: #03658c;
-    --color-font: #ff6361;
-    --color-form:   rgba(119, 21, 42, 0.5);
+    --color-font: #336465;
+    --color-form:   rgba(39, 42, 82, 0.65);
     --color-button: #ffa600;
     --color-headerfont:#58508d;
   }
@@ -20,9 +20,9 @@ body {
     margin: 0;
     background-image: linear-gradient(
       115deg,
-      rgba(83, 26, 26, 0.8),
-      rgba(205, 240, 10, 0.7)
-    ),url("assets/bg-fruits-vert.jpg");
+      rgba(65, 26, 83, 0.8),
+      rgba(240, 10, 152, 0.8)
+    ),url("assets/bg-img.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -32,7 +32,6 @@ form {
     padding: 2.5rem 0.625rem;
     border-radius: 0.25rem;
     color: var(--color-form);
-    align-items: center;
     margin: auto;
   }
 
@@ -40,10 +39,6 @@ form {
     margin: 0 auto 1.25rem auto;
     padding: 0.25rem;
   }
-
-#title{
-    align-items: center;
-}
 
 input,
 button,
@@ -64,10 +59,6 @@ textarea {
     color: var(--color-headerfont);
   }
 
-#survey-form{
-    border: 10px;
-}
-
 header{
     padding: 0 0.625rem;
     margin-bottom: 1.875rem;
@@ -84,21 +75,48 @@ h1 {
 label{
     color: var(--color-font);
     display: block;
-    align-items: center;
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
 }
 
 .container {
     width: 50%;
-    margin: 3.125rem auto 0 auto;
+    margin:auto;
+    padding: 2%;
+    border: 5px;
+    border-radius: 50%;
   }
 
-#name, #email, #number, #dropdown {
+#name,#email,#number,.thoughts{
+  border: 0px;
+  border-radius: 10px;
+  padding: 5%;
+  margin: auto;
+}
+
+#name, #email, #number{
     display: block;
-    width:96.5%;
+    width:92%;
     padding: 0.50rem;
     margin: auto;
+}
+
+#dropdown{
+  border: 0px;
+  border-radius: 10px;
+  padding: 5%;
+  margin: auto;
+  display: block;
+  width:95%;
+  padding: 0.50rem;
+  margin: auto;
+}
+
+#rad,.exp{
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
 }
 
 #submit{
@@ -109,7 +127,7 @@ label{
         color: var(--color-font);
         border-radius: 15px;
         cursor: pointer;
-        align-content: center;
+        margin: auto;
 }
 
 .thoughts{
@@ -117,14 +135,6 @@ label{
     width: 96.5%;
     padding: 0.625rem;
     resize: vertical;
-}
-
-#online-offline, .exp{
-  display:inline-block;
-  margin-right: 0.625rem;
-  min-height: 1.25rem;
-  min-width: 1.25rem;
-  padding: 0.75rem;
 }
 
 button {
