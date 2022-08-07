@@ -2,10 +2,10 @@
 
 :root {
     --color-main: #03658c;
-    --color-font: #f27b50;
-    --color-form:   #730220;
-    --color-button: #d9042b;
-    --color-headerfont:#f29f05;
+    --color-font: #ff6361;
+    --color-form:   rgba(119, 21, 42, 0.5);
+    --color-button: #ffa600;
+    --color-headerfont:#58508d;
   }
 
 body {
@@ -15,6 +15,13 @@ body {
     line-height: 1.4;
     background-color: var(--color-main);
     margin: 0;
+    background-image: linear-gradient(
+      115deg,
+      rgba(83, 26, 26, 0.8),
+      rgba(205, 240, 10, 0.7)
+    ),url("assets/bg-fruits-vert.jpg");
+    background-size: cover;
+    background-position: center;
   }
 
 form {
@@ -35,17 +42,20 @@ form {
     align-items: center;
 }
 
-p{
-    font-size:1.15rem;
-    align-items: center;
-    color: var(--color-font);
-    display: block;
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .subheading{
-    font-size: larger;
+    font-size: 1.5rem;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 00;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     text-align: center;
     color: var(--color-headerfont);
@@ -60,9 +70,12 @@ header{
     margin-bottom: 1.875rem;
 }
 
-h1{
-    color: var(--color-headerfont);
-    text-align: center;
+h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: var(--color-font);
+  font-size: 5rem;
 }
 
 label{
@@ -78,8 +91,11 @@ label{
     margin: 3.125rem auto 0 auto;
   }
 
-input {
+#name, #email, #number, #dropdown {
     display: block;
+    width:96.5%;
+    padding: 0.50rem;
+    margin: auto;
 }
 
 #submit{
@@ -98,4 +114,24 @@ input {
     width: 96.5%;
     padding: 0.625rem;
     resize: vertical;
+}
+
+#online-offline, .exp{
+  display:inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+  padding: 0.75rem;
+}
+
+button {
+  border: none;
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
 }
