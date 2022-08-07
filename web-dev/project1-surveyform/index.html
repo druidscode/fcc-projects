@@ -63,7 +63,7 @@
 
         <div class="form-items">
             <label id="d-down" class="air-class">
-                <p>What kind of business you are?</p>
+                <p>What kind of business you have?</p>
                 <select id="dropdown">
                     <option>Select your occupation</option>
                     <option>Small (1-10 Employees)</option>
@@ -71,57 +71,69 @@
                     <option>Large (More than 20 Employees) </option>
                 </select>
             </label>
+        </div>
 
 <!--THIS BLOCK CONTAINS RADIO BTNS-->
+        <div class="radio">
 
             <label id="order-type">
-                <p>How to order your juices?</p>
+                <p>What Subscription plan do you have?</p>
                 <input
                 id="rad"
                 name="ordertype"
                 type="radio"
                 />
-                Offline
+                <label class="r-lab">DIY</label><br>
 
                 <input
                 id="rad"
                 name="ordertype"
                 type="radio"
                 />
-                Online
+                <label class="r-lab">Basic</label><br>
+
+                <input
+                id="rad"
+                name="ordertype"
+                type="radio"
+                />
+                <label class="r-lab">Premium</label><br>
             </label>
+        </div>
 
 <!--THIS BLOCK CONTAINS CHECKBOXES-->
 
+        <div class="chk-boxes">
+
             <label id="experience">
-                <p>Want to help us improve your In-Store experience? Select the relevant option which you think needs improvment.</p>
+                <p>Select the relevant option which you think needs improvment.</p>
                 <input
                 class="exp"
                 type="checkbox"
                 value="Staff"
                 />
-                Staff
+                <label class="c-lab">Hardware quality</label><br>
 
                 <input
                 class="exp"
                 type="checkbox"
                 value="ambiance"
                 />
-                Ambiance
+                <label class="c-lab">Software support</label><br>
 
                 <input
                 class="exp"
                 type="checkbox"
                 value="music"
                 />
-                Music Playlist
+                <label class="c-lab">On-call support</label><br>
                 
                 <input
                 class="exp"
                 type="checkbox"
                 value="deliverytime"
                 />
-                Delivery Time
+                <label class="c-lab">Server downtime</label><br>
             </label>
 
         </div>
@@ -131,7 +143,7 @@
         <div class="form-items">
             <label class="anything-else">
                 <p>
-                Any more thoughts about our Services? Feel free to add them below. 
+                More thoughts about our Services? Feel free to add them below. 
                 </p>
                 <textarea
                 class="thoughts"

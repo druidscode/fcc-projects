@@ -3,11 +3,9 @@
 
 /*COLOR PALLETE*/
 :root {
-    --color-main: #03658c;
-    --color-font: #336465;
+    --color-font: rgb(218, 218, 218);
     --color-form:   rgba(39, 42, 82, 0.65);
     --color-button: #ffa600;
-    --color-headerfont:#58508d;
   }
 
 /*FORM*/
@@ -16,7 +14,6 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.4;
-    background-color: var(--color-main);
     margin: 0;
     background-image: linear-gradient(
       115deg,
@@ -56,7 +53,7 @@ textarea {
     font-weight: 00;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     text-align: center;
-    color: var(--color-headerfont);
+    color: var(--color-font);
   }
 
 header{
@@ -113,10 +110,14 @@ label{
 }
 
 #rad,.exp{
-  display: inline-block;
   margin-right: 0.625rem;
   min-height: 1.25rem;
   min-width: 1.25rem;
+}
+
+.r-lab,.c-lab,.radio,.chk-boxes{
+  display:inline-block;
+  padding-top: 10px;
 }
 
 #submit{
