@@ -6,7 +6,8 @@
     --color-font-head: rgb(31, 31, 31);
     --color-font-sub: rgb(92, 92, 92);
     --color-form: rgba(206, 206, 206, 0.185);
-    --color-button: rgb(44, 62, 88);
+    --color-font-life: rgb(44, 62, 88);
+    --color-font-hlife: rgb(44, 62, 88);
 
 }
 
@@ -16,7 +17,7 @@ body{
     font-family: 'Poppins', sans-serif;
       font-weight: 400;
       width: 90%;
-      padding: 2% 5%;
+      padding: 0.8% 2%;
       margin: auto;
 }
 
@@ -30,23 +31,26 @@ h1{
     font-size: 2.5rem;
     color: var(--color-font-head);
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0%;
 }
 
 h4{
-    font-size: 1.7rem;
-    color: var(--color-font-head);
+    font-size: 1.65rem;
+    color: rgb(58, 57, 57);
     text-align: center;
 }
 
 h6{
     font-size: 1rem;
-    color: var(--color-font-sub);
+    color: var(--color-font-hlife);
     text-align: left;
+    padding-bottom: 0px;
 }
 
 p{
     font-size: 0.7rem;
-    color: var(--color-font-sub);
+    color: var(--color-font-life);
     text-align: left;
 }
 
@@ -54,23 +58,22 @@ p{
     font-size: 0.9rem;
     color: var(--color-font-sub);
     text-align: center;
+    padding-top: 0%;
+    padding-bottom: 45px;
 }
 
 #img-caption{
-    font-size: 0.7rem;
-    color: var(--color-font-sub);
+    font-size: 0.9rem;
+    color: var(--color-font-life);
     text-align: center;
+    padding: 5px;
 }
 
 #tribute{
     font-size: 1.15rem;
     color: var(--color-font-head);
     text-align: center;
-}
-
-#section-two{
-    margin: auto;
-    width: auto;
+    padding: 5rem 10rem;
 }
 
 img{
@@ -84,4 +87,36 @@ img{
     background: white;
     padding: 10px;
     margin:0px;
+}
+
+#early-life{
+    display: block;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+}
+
+#dip-car{
+    display: block;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+}
+
+#in-rel{
+    display: block;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px; 
+}
+
+#ww-two{
+    display: block;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
 }
