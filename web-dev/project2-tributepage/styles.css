@@ -1,0 +1,87 @@
+/*IMPORTING FONT*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+/*COLOR PALLETE*/
+:root{
+    --color-font-head: rgb(31, 31, 31);
+    --color-font-sub: rgb(92, 92, 92);
+    --color-form: rgba(206, 206, 206, 0.185);
+    --color-button: rgb(44, 62, 88);
+
+}
+
+/*MAIN SECTION*/
+
+body{
+    font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      width: 90%;
+      padding: 2% 5%;
+      margin: auto;
+}
+
+#padding-first{
+    background: var(--color-form);
+    border-radius: 1rem; 
+    margin: auto;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: var(--color-font-head);
+    text-align: center;
+}
+
+h4{
+    font-size: 1.7rem;
+    color: var(--color-font-head);
+    text-align: center;
+}
+
+h6{
+    font-size: 1rem;
+    color: var(--color-font-sub);
+    text-align: left;
+}
+
+p{
+    font-size: 0.7rem;
+    color: var(--color-font-sub);
+    text-align: left;
+}
+
+#sub-heading{
+    font-size: 0.9rem;
+    color: var(--color-font-sub);
+    text-align: center;
+}
+
+#img-caption{
+    font-size: 0.7rem;
+    color: var(--color-font-sub);
+    text-align: center;
+}
+
+#tribute{
+    font-size: 1.15rem;
+    color: var(--color-font-head);
+    text-align: center;
+}
+
+#section-two{
+    margin: auto;
+    width: auto;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#image-block{
+    background: white;
+    padding: 10px;
+    margin:0px;
+}
