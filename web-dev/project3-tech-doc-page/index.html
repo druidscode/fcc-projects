@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <title>Samba Documentation</title>
+    </head>
+    <body>
+        <div class="nav-div">
+        <nav id="navbar">
+            <header id="nav-heading"><h2>SMB Documentation</h2></header>
+        
+            <a class="nav-link" href="#Samba">Samba</a>
+            <a class="nav-link" href="#Requirements">Requirements</a>
+            <a class="nav-link" href="#Installation">Installation</a>
+            <a class="nav-link" href="#Configuration">Configuration</a>
+            <a class="nav-link" href="#Security">Security</a>
+        </div>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Samba">
+                <header id="Samba">
+                    <h1>Samba</h1>
+                </header>
+                <p id="paragraph">Samba is an incredibly powerful tool that allows you to create seamless file and printer sharing to SMB/CIFS clients from a Linux server/desktop. With Samba you can even connect that Linux machine to a Windows Domain. But before you can tackle the more challenging aspects of Samba, you first must have it up and running.</p>
+                <p id="paragraph">We’re not going to deal with Windows Domain controllers yet; instead, we’ll focus on the much simpler task of joining a Windows workgroup and sharing out folders to all clients on that workgroup.</p>
+                
+            </section>
+            <section class="main-section" id="Requirements">
+                <header id="Requirements">
+                    <h3>Requirements</h3>
+                </header>
+                <p id="paragraph">You don’t need much to get Samba up and running. You’ll need:</p>
+            <ol>
+                <li id="list">A Windows workgroup</li>
+                <li id="list">A Linux machine</li>
+                <li id="list">A bit of time</li>
+            </ol>
+                <p id="paragraph">I’ll demonstrate this on Ubuntu 16.04, but the process works the same on most Linux distributions. First, we’ll create a folder that will allow anonymous sharing across your workgroup and then create a password-protected share.</p>
+            </section>
+            <section class="main-section" id="Installation">
+                <header id="Installation">
+                    <h3>Installation</h3>
+                </header>
+            <ol>
+                <li id="list">On your Linux machine, open a terminal window.</li>
+                <li id="list">Install the necessary software with the command: <code>sudo apt-get install -y samba samba-common python-glade2 system-config-samba</code></li>
+                <li id="list">Type your sudo password and hit Enter.</li>
+                <li id="list">Allow the installation to complete.</li>
+            </ol>
+                <p id="paragraph">That’s it–Samba will install and start.</p>
+            </section>
+            <section class="main-section" id="Configuration">
+                <header id="Configuration">
+                    <h3>Configuration</h3>
+                </header>
+                <p id="paragraph">The main configuration file for Samba is <code id="code">/etc/samba/smb.conf</code>. Many people will advise you to back up that file and create a new file with specific contents; however, I suggest using this file, as it is better tuned for the release of Samba you’ve installed.</p>
+                <p id="paragraph">You should back up the default configuration file so you can safely edit the original and always have a working copy to fall back on. To back up the configuration file, issue the command:</p>
+                <code id="code">sudo cp -pf /etc/samba/smb.conf /etc/samba/smb.conf.bak</code>
+                <p id="paragraph">Now open the <code id="code">/etc/samba/smb.conf</code> file in your favorite text editor and prepare to make some changes.</p>
+                <p id="paragraph">Look for this line:</p>
+                <code id="code">workgroup = WORKGROUP</code>
+                <p id="paragraph">Change WORKGROUP to reflect your network needs.</p>
+                <p id="paragraph">The next section you need to edit is way down in the Share Definitions. Scroll down below that demarcation and add the following:</p>
+            <div id="big-code-block"><pre><code>
+[Anonymous]
+
+path = /samba/anonymous
+browsable = yes
+writable = yes
+read only = no
+force user = nobody
+            </code></pre></div>
+            <p id="paragraph">Save that file and restart Samba with this command:<code id="code">sudo service smbd restart</code></p>
+            <p id="paragraph">You should be able to reach those shares from any machine on your network. Since we set that share as anonymous, users won’t have to log in to access the files and folders within.</p>
+            </section>
+            <section class="main-section" id="Security">
+                <header id="Security">
+                    <h3>Security</h3>
+                </header>
+                <p id="paragraph">We’ve just added an anonymous share that anyone could access. If you want to add a folder (we’ll use /samba/shares as an example) that is password protected, follow these steps.</p>
+            <ol>
+                <li id="list">Open a terminal window on your Samba server.</li>
+                <li id="list">Create a new group with the command <code id="code">sudo addgroup smbgrp</code>.</li>
+                <li id="list">Create a new user with the command <code id="code">sudo useradd shares -G smbgrp</code>.</li>
+                <li id="list">Create a Samba password for the user with the command <code id="code">smbpasswd -a shares</code>.</li>
+                <li id="list">Type and verify a password for the user.</li>
+                <li id="list">Create the folder with the command <code id="code">sudo mkdir -p /samba/shares</code>.</li>
+                <li id="list">Change the permissions of the folder with the command <code id="code">sudo chmod -R 0770 /samba/shares</code>.</li>
+                <li id="list">Change the ownership of the folder with the command <code id="code">sudo chown root:smbgrp /samba/shares</code>.</li>
+            </ol>
+                <p id="paragraph">Now open the /etc/samba/smb.conf file and add the following under the Share Definitions:</p>
+                <div id="big-code-block"><pre><code id="code">
+[SECURED]
+
+path = /samba/shares
+valid users = @smbgrp
+browsable = yes
+writable = yes
+read only = no
+                </code></pre></div>
+                <p id="paragraph">Save the file and restart Samba with the command sudo service smbd restart. You now have a password-protected Samba share ready to use. Anyone that needs access to the share will log in with username shares and the password you set when you issued the command sudo smbpasswd -a shares.</p>
+                <h4>Bend it to fit</h4>
+                <p id="paragraph">One of the great things about Samba is it allows you to bend it to fit your needs. Create as many shares as you want (password protected or not), share out printers, and even join Windows Domains. Make Samba yours, and it will serve you well for a long time.</p>
+
+            </section>
+        </main>
+    </body>
+    <footer id="footer"><p id="foot-p-tag">Resource: <a href="https://www.techrepublic.com/article/how-to-set-up-quick-and-easy-file-sharing-with-samba/">Techrepublic</a></p></footer>
+</html>

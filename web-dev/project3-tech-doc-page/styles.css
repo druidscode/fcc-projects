@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
+body{
+    font-family: 'Bitter', sans-serif;
+    font-weight: 400;
+}
+
+section{
+    margin-left: 30%;
+}
+
+#navbar{
+    position: fixed;
+    left: 0;
+    display: block;
+    margin-left: 0;
+    border-right: solid;
+    border-color: rgb(99, 99, 99);
+}
+
+.nav-div{
+    background-color: beige;
+    position: fixed;
+    padding: 25px;
+    width: 25%;
+    height: 100%;
+}
+
+a.nav-link {
+    display: block;
+    padding-block: 10%;
+    padding-left: 15px;
+    font-size: 1.3rem;
+    color: rgb(70, 70, 70);
+    border-top: solid 1px;
+    border-color: gray;
+}
+
+#nav-heading{
+    text-align: left;
+    padding: 15px;
+}
+
+footer{
+    background-color: beige;
+}
+
+#foot-p-tag{
+    text-align: right;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 5rem;
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 25px;
+    margin: 0;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+code{
+    background-color: black;
+    color: green;
+    font-size: 0.9rem;
+}
+
+#big-code-block{
+    background-color: black;
+    width: 40%;
+}
+
+@media (min-width:762px) and (max-width:1922px) {
+    .main-section{
+        font-size: medium;
+    }
+    
+}
+
